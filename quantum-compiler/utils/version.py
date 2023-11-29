@@ -89,5 +89,3 @@ def get_git_changeset():
     except ValueError:
         return None
     return timestamp.strftime("%Y%m%d%H%M%S")
-
-
