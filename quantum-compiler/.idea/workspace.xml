@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d3f40f6-fa90-4654-8fe4-8d06922f260d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/quantum-compiler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/quantum-compiler.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/QuantumCompiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuantumCompiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/utils/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/update.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/version.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +56,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "v1.0.0",
+    "git-widget-placeholder": "v1.0",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "E:/QuantumCompiler/github/Quantum-Compiler/quantum-compiler/QuantumCompiler.py",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
@@ -74,8 +76,9 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 (venv) (3)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/QuantumCompiler.py" />

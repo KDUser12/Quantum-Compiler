@@ -35,7 +35,7 @@ def get_version(version=None):
         if git_changeset:
             sub = ".dev%s" % git_changeset
 
-    elif version[3] != "release":
+    elif version[3] != "final":
         mapping = {"alpha": "a", "beta": "b", "rc": "rc"}
         sub = mapping[version[3]] + str(version[4])
 
@@ -55,9 +55,10 @@ def get_complete_version(version=None):
     """
     if version is None:
         from QuantumCompiler import VERSION
+        return VERSION
     else:
         assert len(version) == 5
-        assert version[3] in ('alpha', 'beta', 'rc', 'release')
+        assert version[3] in ('alpha', 'beta', 'rc', 'final')
 
     return version
 
