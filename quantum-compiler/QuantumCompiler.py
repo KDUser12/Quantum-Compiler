@@ -11,4 +11,4 @@ VERSION = (1, 0, 0, 'final', 0)
 __version__ = get_version(VERSION)
 
 if __name__ == '__main__':
-    app.App(__version__)
+    app.QuantumCompilerApp(__version__)
