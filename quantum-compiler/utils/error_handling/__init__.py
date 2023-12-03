@@ -27,8 +27,8 @@ def output(code, message=None):
 
     if message is None:
         description = _find_element(code)
-        format_output = f'\n[{current_time}] : ERROR {code} - {description}'
+        format_output = f'\n[{current_time}] : ERROR {code} - {description}\n'
     else:
-        format_output = f'\n[{current_time}] : {code} {message}'
+        format_output = f'\n[{current_time}] : {code} {message}\n'
     _output_file(format_output, log_file)
     print(format_output)

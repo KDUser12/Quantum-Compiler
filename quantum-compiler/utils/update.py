@@ -1,4 +1,5 @@
 import requests
+import utils.error_handling
 
 
 def get_latest_version(current_version):
@@ -16,15 +17,15 @@ def get_latest_version(current_version):
 
         return update
 
-    except requests.exceptions.RequestException:
-        return None  # f"An error occurred while using the GitHub API: {error}"
+    except requests.exceptions.RequestException as error:
+        return utils.error_handling.output("requests.exceptions.RequestException", error)
 
 def check_for_update(current_version, latest_version):
     """Check if there is an update available."""
     if current_version == latest_version:
-        return False  # "You are using the latest version of Quantum Compiler !"
+        return "You are using the latest version of Quantum Compiler !"
     else:
-        return True  # ("Update available now! Click here to install the latest version of Quantum Compiler: https://github.com/KDUser12/Quantum-Compiler/releases")
+        return "Update available now! Click here to install the latest version of Quantum Compiler: https://github.com/KDUser12/Quantum-Compiler/releases"
 
 
 
