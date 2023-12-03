@@ -4,11 +4,11 @@
 # program. It also allows you to create setups for your own program.
 
 from utils.version import get_version
-import apps
+import app
 
 VERSION = (1, 0, 0, 'final', 0)
 
 __version__ = get_version(VERSION)
 
 if __name__ == '__main__':
-    apps.Apps(__version__)
+    app.App(__version__)
