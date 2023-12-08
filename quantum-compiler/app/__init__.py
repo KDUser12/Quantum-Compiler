@@ -2,12 +2,14 @@ import sys
 from utils.update import get_latest_version
 from utils.version import PY36
 import utils.error_handling
+from core.management import CommandManagement
 
 
 class QuantumCompilerApp:
     def __init__(self, version):
         self.version = version
         self.run()
+        CommandManagement()
 
     def run(self):
         try:

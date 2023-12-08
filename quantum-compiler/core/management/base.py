@@ -13,11 +13,12 @@ import platform
 class BaseCommand:
     # Metadata about this command.
     help = ""
+    command = ""
 
     # Configuration shortcuts that alter various logic.
     _called_from_command_line = False
     _called_from_the_program_console = True
-    requires_system_check = True
+    requires_system_check = False
     requires_python_version_check = False
 
     def __init__(self):
