@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d3f40f6-fa90-4654-8fe4-8d06922f260d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/management/commands/basic_commands.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/management/manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/management/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/management/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/management/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/management/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/error_handling/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/error_handling/manager.py" afterDir="false" />
-    </list>
+    <list default="true" id="6d3f40f6-fa90-4654-8fe4-8d06922f260d" name="Changes" comment="NEW FEATURE : command management and basic commands" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,6 +114,15 @@
       <option name="presentableId" value="Default" />
       <updated>1701278788713</updated>
     </task>
+    <task id="LOCAL-00001" summary="NEW FEATURE : command management and basic commands">
+      <option name="closed" value="true" />
+      <created>1702071546855</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702071546855</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -141,6 +142,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Merge remote-tracking branch 'origin/v1.0' into v1.0&#10;&#10;# Conflicts:&#10;#&#9;quantum-compiler/.idea/workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="NEW FEATURE : command management and basic commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="NEW FEATURE : command management and basic commands" />
   </component>
 </project>
