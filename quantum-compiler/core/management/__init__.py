@@ -7,7 +7,6 @@ from core.management.commands.basic_commands import (
     licenseCommand,
     exitCommand
 )
-from QuantumCompiler import __version__
 
 
 class CommandManagement:
@@ -21,25 +20,35 @@ class CommandManagement:
     def call_command(self):
         while self.console:
             self.prompt = input(f'[{self.user_path}] : ')
-            self.get_command()
+            self.process_command()
 
-    def get_command(self):
+    def process_command(self):
         command, category = self.find_command()
         if category == 'basic.commands':
-            helpCommand(command)
-            aboutCommand(command, __version__)
-            licenseCommand(command)
-            exitCommand(command)
+            structure = str(command + 'Command')
+            basic_commands = [
+                {
+                    'helpCommand': lambda: print(helpCommand()),
+                    'aboutCommand': lambda: print(aboutCommand()),
+                    'licenseCommand': lambda: print(licenseCommand()),
+                    'exitCommand': lambda: exitCommand()
+                }
+            ]
+
+            for command_factory in basic_commands:
+                for command_name, command_function in command_factory.items():
+                    if command_name == structure:
+                        command_function()
+                        break
+                else:
+                    utils.error_handling.output('302')
+                    break
 
     def find_command(self):
         for entry in core.management.manager.commands:
             for category, cmd in entry.items():
                 if self.prompt in cmd:
                     return self.prompt, category
-                else:
-                    utils.error_handling.output('301')
-                    return None, None
-            else:
-                continue
-
-
+        else:
+            utils.error_handling.output('301')
+            return None, None

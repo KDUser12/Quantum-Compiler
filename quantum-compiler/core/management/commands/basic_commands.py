@@ -1,36 +1,31 @@
 import sys
 from core.management.base import BaseCommand
 import datetime
+from QuantumCompiler import __version__
 
 
 class helpCommand(BaseCommand):
     help = "This allows the user to learn more about the commands."
     command = "help"
 
-    def __init__(self, prompt):
-        if prompt == self.command:
-            super().__init__()
+    def __str__(self):
+        commands = [self, aboutCommand, licenseCommand, exitCommand]
+        printer = 'BASIC COMMANDS\n'
 
-            commands = [self, aboutCommand, licenseCommand, exitCommand]
-            printer = 'BASIC COMMANDS\n'
+        for cmd in commands:
+            printer += f'{cmd.command} : {cmd.help}\n'
 
-            for i in commands:
-                printer += f'{i.command} : {i.help}\n'
-
-            print(printer)
+        return printer
 
 
 class aboutCommand(BaseCommand):
     help = "This allow you to learn more about Quantum Compiler."
     command = "about"
 
-    def __init__(self, prompt, version):
-        if prompt == self.command:
-            super().__init__()
-
-            current_version = version
-            current_years = datetime.datetime.now().year
-            about = f'''Welcome to Quantum Compiler v{current_version}
+    def __str__(self):
+        current_version = __version__
+        current_years = datetime.datetime.now().year
+        about = f'''Welcome to Quantum Compiler v{current_version}
 
 Quantum Compiler is a powerful solution designed to simplify the process of compiling, creating installers, and obfuscating files in your Python projects.
 Developed by KDUser12 on GitHub.
@@ -46,17 +41,15 @@ Each line of code has been written to the highest industry standards, ensuring a
 
 © 2023-{current_years} Quantum Compiler. All right reserved.'''
 
-            print(about)
+        return about
 
 
 class licenseCommand(BaseCommand):
     help = "Displays the official license of the programs."
     command = "license"
 
-    def __init__(self, prompt):
-        if prompt == self.command:
-            super().__init__()
-            license = '''MIT License
+    def __str__(self):
+        return '''MIT License
 Copyright (c) 2023 KDUser
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -77,15 +70,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.'''
 
-            print(license)
-
 
 class exitCommand(BaseCommand):
     help = "Allows the user to exit the program."
     command = "exit"
 
-    def __init__(self, prompt):
-        if prompt == self.command:
-            super().__init__()
-            sys.exit(0)
-
+    def __init__(self):
+        super().__init__()
+        sys.exit(0)

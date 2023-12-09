@@ -16,7 +16,8 @@ You can download the recommended version from the official Python website: https
             "201": "The argument you entered is invalid."
         },
         "Error 3xx": {  # quantum-compiler/core/management/
-            "301": "The command you entered does not exist or is invalid."
+            "301": "The command you entered does not exist or is invalid.",
+            "302": "An error occurred while naming the command."
         }
     }
 ]

@@ -1,3 +1,4 @@
+import platform
 from utils.version import (
     PY36,
     PY37,
@@ -7,7 +8,6 @@ from utils.version import (
     PY311,
     PY312
 )
-import platform
 
 
 class BaseCommand:
@@ -21,23 +21,29 @@ class BaseCommand:
     requires_system_check = False
     requires_python_version_check = False
 
+    PYTHON_VERSIONS = {
+        36: PY36,
+        37: PY37,
+        38: PY38,
+        39: PY39,
+        310: PY310,
+        311: PY311,
+        312: PY312
+    }
+
     def __init__(self):
         self.system = self.check_system()
         self.python_version = self.check_python_version()
 
     def check_system(self):
         if self.requires_system_check:
-            system_info = platform.system()
-            return system_info
+            return platform.system()
 
     def check_python_version(self):
         if self.requires_python_version_check:
-            py_versions = [(36, PY36), (37, PY37), (38, PY38), (39, PY39), (310, PY310), (311, PY311), (312, PY312)]
-            for version, is_installed in py_versions:
+            for version, is_installed in self.PYTHON_VERSIONS.items():
                 if not is_installed:
-                    index = py_versions.index((version, is_installed))
-                    python_version = py_versions[index - 1]
-                    return python_version
-                else:
-                    continue
+                    return self.PYTHON_VERSIONS.get(version - 1, is_installed)
+        return None
+
 
